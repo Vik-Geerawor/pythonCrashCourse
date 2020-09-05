@@ -5,35 +5,22 @@
 
 from functions import *
 
-
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-def test_func():
-    ## Calling the function
-    # greet_user('Vik')  # argument
-
-    ## describe_pet('hamster', 'harry')
-    ## order of args is diff from params'
-    # describe_pet(pet_name='harry', animal_type='hamster')
-
-    # musician = get_formatted_name('jimi', 'hendrix')
-    # print(musician)
-    # musician = get_formatted_name('john', 'hooker', 'lee')
-    # print(musician)
-
-    # musician = build_person('jimi', 'hendrix', age=28)
-    # print(musician['first'].title() + " " + \
-    #       musician['last'].title() + \
-    #       " age: " + \
-    #       str(musician['age']))
-
-    greetings()
-
-
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # print_hi('PyCharm')
-    test_func()
+    # test_func()
+
+    ## greet_users
+    # usernames = ['hannah', 'ty', 'margot']
+    # greet_users(usernames)
+
+    ## modifying list via functions
+    unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+    completed_models = []
+    print_models(unprinted_designs, completed_models)
+    show_completed_models(completed_models)

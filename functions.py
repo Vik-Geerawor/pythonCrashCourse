@@ -27,6 +27,7 @@ def build_person(first_name, last_name, age=''):
 
     return person
 
+
 def greetings():
     while True:
         print("\nPlease tell me your name. Enter exit to quit")
@@ -39,3 +40,27 @@ def greetings():
 
         formatted_name = get_formatted_name(f_name, l_name)
         print("\nHello, " + formatted_name + "!")
+
+
+## greet_users
+def greet_users(names):
+    """Print a simple greeting to each user in the list."""
+    for name in names:
+        msg = "Hello, " + name.title() + "!"
+        print(msg)
+
+
+def print_models(unprinted_designs, completed_models):
+    """"Print each design and then move it to completed_models"""
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+
+        # Simulate printing
+        print("Printing model: " + current_design)
+        completed_models.append(current_design)
+
+def show_completed_models(completed_models):
+    """Show all printed models"""
+    print("\nThe following models have been printed")
+    for completed_model in completed_models:
+        print(completed_model)
