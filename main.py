@@ -20,6 +20,12 @@ if __name__ == '__main__':
     # greet_users(usernames)
 
     ## modifying list via functions
+    # unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+    # completed_models = []
+    # print_models(unprinted_designs, completed_models)
+    # show_completed_models(completed_models)
+
+    ## modifying list via functions
     unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
     completed_models = []
     print_models(unprinted_designs, completed_models)
