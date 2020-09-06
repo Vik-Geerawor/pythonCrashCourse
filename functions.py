@@ -39,3 +39,10 @@ def greetings():
 
         formatted_name = get_formatted_name(f_name, l_name)
         print("\nHello, " + formatted_name + "!")
+
+
+def greet_users(names):
+    """Print a simple greeting to each user in the list."""
+    for name in names:
+        msg = "Hello, " + name.title() + "!"
+        print(msg)

@@ -36,4 +36,9 @@ def test_func():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # print_hi('PyCharm')
-    test_func()
+    # test_func()
+
+    # create a list
+    usernames = ['hannah', 'ty', 'margot']
+    # call function
+    greet_users(usernames)
