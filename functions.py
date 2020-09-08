@@ -81,3 +81,20 @@ def show_completed_models(completed_models):
     print("\nThe following models have been printed")
     for completed_model in completed_models:
         print(completed_model)
+
+
+def make_pizza(size, *toppings):
+    """Summarise the pizza to be made"""
+    print("\nMaking a " + str(size) + "-inch pizza with the following toppings:")
+    for topping in toppings:
+        print("- " + topping)
+
+
+def build_profile(first, last, **user_info):
+    """Dictionary of User Info"""
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
