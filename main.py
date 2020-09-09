@@ -1,4 +1,5 @@
 import functions
+import classes as c
 
 
 def print_hi(name):
@@ -6,11 +7,7 @@ def print_hi(name):
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    # print_hi('PyCharm')
-    # test_func()
-
+def test_func():
     ## greet_users
     # usernames = ['hannah', 'ty', 'margot']
     # functions.greet_users(usernames)
@@ -41,3 +38,26 @@ if __name__ == '__main__':
     ## dealing with unknown type of arb args
     user_profile = functions.build_profile('albert', 'einstein', location='princeton', field='physics')
     print(user_profile)
+
+
+def test_class():
+    # my_dog = c.Dog('willie', 6)
+    # print("My dog's name is " + my_dog.name.title() + ".")
+    # print("My dog is " + str(my_dog.age) + " years old.")
+    # my_dog.sit()
+    # my_dog.roll_over()
+
+    my_new_car = c.Car('mercedes', 'c-class', 2013)
+    print(my_new_car.get_descriptive_name())
+    my_new_car.odometer_reading = 34
+    my_new_car.update_odometer(-14)
+    my_new_car.read_odometer()
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    # print_hi('PyCharm')
+    # test_func()
+    test_class()
+
+
