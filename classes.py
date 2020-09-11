@@ -47,3 +47,35 @@ class Car():
             self.odometer_reading += miles
         else:
             print("You can't reduce mileage!")
+
+class Battery():
+    """A battery model for an EV"""
+
+    def __init__(self, battery_size=70):
+        """Initialize the battery's attributes"""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Batter description"""
+        print("This car has a " + str(self.battery_size) + "-kWh battery")
+
+    def get_range(self):
+        """Shows the range of the battery"""
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+
+        message = "This car can go approx. " + str(range)
+        message += " miles on a full charge."
+        print(message)
+
+class ElectricCar(Car):
+    """Represent aspects of a car, specific to electric vehicles"""
+
+    def __init__(self, make, model, year):
+        """Initialize attributes of the parent class."""
+        super().__init__(make, model, year)
+        self.battery = Battery(85)
+
+

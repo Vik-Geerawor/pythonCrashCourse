@@ -47,11 +47,17 @@ def test_class():
     # my_dog.sit()
     # my_dog.roll_over()
 
-    my_new_car = c.Car('mercedes', 'c-class', 2013)
-    print(my_new_car.get_descriptive_name())
-    my_new_car.odometer_reading = 34
-    my_new_car.update_odometer(-14)
-    my_new_car.read_odometer()
+    # my_new_car = c.Car('mercedes', 'c-class', 2013)
+    # print(my_new_car.get_descriptive_name())
+    # my_new_car.odometer_reading = 34
+    # my_new_car.update_odometer(-14)
+    # my_new_car.read_odometer()
+
+    ## inheritance
+    my_tesla = c.ElectricCar('tesla', 'model 3', 2016)
+    print(my_tesla.get_descriptive_name())
+    my_tesla.battery.describe_battery()
+    my_tesla.battery.get_range()
 
 
 # Press the green button in the gutter to run the script.
