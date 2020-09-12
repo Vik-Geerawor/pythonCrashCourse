@@ -83,6 +83,7 @@ def test_fe():
     # fe.concat_pi()
     fe.pi_search()
 
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # print_hi('PyCharm')
@@ -90,7 +91,7 @@ if __name__ == '__main__':
     # test_class()
     # test_std_lib()
 
-    ## files and exceptions
+    # files and exceptions
     test_fe()
 
 
