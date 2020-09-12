@@ -1,5 +1,8 @@
-import functions
-import classes as c
+from collections import OrderedDict
+
+import functions as f
+import car as c
+import files_and_exceptions as fe
 
 
 def print_hi(name):
@@ -10,33 +13,33 @@ def print_hi(name):
 def test_func():
     ## greet_users
     # usernames = ['hannah', 'ty', 'margot']
-    # functions.greet_users(usernames)
+    # f.greet_users(usernames)
 
-    ## modifying list via functions
+    ## modifying list via f
     # unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
     # completed_models = []
-    # functions.print_models(unprinted_designs, completed_models)
-    # functions.how_completed_models(completed_models)
+    # f.print_models(unprinted_designs, completed_models)
+    # f.how_completed_models(completed_models)
 
-    ## modifying list via functions
+    ## modifying list via f
     # unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
     # completed_models = []
-    # functions.print_models(unprinted_designs, completed_models)
-    # functions.show_completed_models(completed_models)
+    # f.print_models(unprinted_designs, completed_models)
+    # f.show_completed_models(completed_models)
 
     ## passing a copy of the list
     # unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
     # completed_models = []
-    # functions.print_models(unprinted_designs[:], completed_models)
-    # functions.show_completed_models(completed_models)
+    # f.print_models(unprinted_designs[:], completed_models)
+    # f.show_completed_models(completed_models)
     # print(unprinted_designs)
 
     ## order of precedence of types of parameters
-    # functions.make_pizza(16, 'pepperoni')
-    # functions.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+    # f.make_pizza(16, 'pepperoni')
+    # f.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 
     ## dealing with unknown type of arb args
-    user_profile = functions.build_profile('albert', 'einstein', location='princeton', field='physics')
+    user_profile = f.build_profile('albert', 'einstein', location='princeton', field='physics')
     print(user_profile)
 
 
@@ -60,10 +63,35 @@ def test_class():
     my_tesla.battery.get_range()
 
 
+def test_std_lib():
+    favourite_langs = OrderedDict()
+
+    favourite_langs['jen'] = 'python'
+    favourite_langs['sarah'] = 'c'
+    favourite_langs['edward'] = 'ruby'
+    favourite_langs['phil'] = 'python'
+
+    for name, language in favourite_langs.items():
+        print(name.title() + "'s favourite language is " \
+              + language.title() + ".")
+
+
+def test_fe():
+    # fe.file_reader_all()
+    # fe.file_read_line()
+    # fe.file_read_lines()
+    # fe.concat_pi()
+    fe.pi_search()
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # print_hi('PyCharm')
     # test_func()
-    test_class()
+    # test_class()
+    # test_std_lib()
+
+    ## files and exceptions
+    test_fe()
+
 
 
