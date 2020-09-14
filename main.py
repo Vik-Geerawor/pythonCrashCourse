@@ -81,7 +81,10 @@ def test_fe():
     # fe.file_read_line()
     # fe.file_read_lines()
     # fe.concat_pi()
-    fe.pi_search()
+    # fe.pi_search()
+    # fe.write_message()
+    # fe.zero_division_error()
+    fe.file_not_found()
 
 
 # Press the green button in the gutter to run the script.
