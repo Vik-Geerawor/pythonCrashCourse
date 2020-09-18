@@ -1,3 +1,7 @@
+import json
+from json.decoder import JSONDecodeError
+
+
 def file_read_all():
     """Displays the entire contents of a file"""
 
@@ -89,8 +93,8 @@ def zero_division_error():
             print(answer)
 
 
-def file_not_found():
-    filename = 'text_files/alice.txt'
+def count_words(filename):
+    """Count the approx. no. of words in a file"""
 
     try:
         with open(filename, 'r') as f_obj:
@@ -103,5 +107,58 @@ def file_not_found():
         num_words = len(words)
         print("The file " + filename + " has about " + str(num_words) + " words.")
 
+
+def json_dump(data, filename):
+    with open(filename, 'w') as f_obj:
+        json.dump(data, f_obj)
+
+
+def json_load(filename):
+    with open(filename, 'r') as f_obj:
+        data = json.load(f_obj)
+    return data
+
+
+def remember_me(username, filename):
+    with open(filename, 'w') as f_obj:
+        json.dump(username, f_obj)
+
+
+def get_stored_username(filename):
+    """Get username if exists"""
+
+    # filename = 'text_files/username.json'
+
+    try:
+        with open(filename, 'r') as f_obj:
+            username = json.load(f_obj)
+    except FileNotFoundError:
+        return None
+    except JSONDecodeError:
+        return None
+    else:
+        return username
+
+
+def get_new_username(filename):
+    """Prompt for an new username"""
+
+    # filename = 'text_files/username.json'
+    username = input("What is your username: ")
+
+    with open(filename, 'w') as f_obj:
+        json.dump(username, f_obj)
+    return username
+
+
+def greet_user(filename):
+    """Greet the user with username"""
+
+    username = get_stored_username(filename)
+    if username:
+        print("Welcome back, " + username + "!")
+    else:
+        username = get_new_username(filename)
+        print("We'll remember you know " + username + "!")
 
 

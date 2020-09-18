@@ -3,7 +3,7 @@ from collections import OrderedDict
 import functions as f
 import car as c
 import files_and_exceptions as fe
-
+import testing as t
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -84,7 +84,20 @@ def test_fe():
     # fe.pi_search()
     # fe.write_message()
     # fe.zero_division_error()
-    fe.file_not_found()
+    # filenames = ['text_files/alice.txt', 'text_files/pi_digits.txt',
+    #              'text_files/programming.txt', 'text_files/siddhartha.txt']
+    # for filename in filenames:
+    #     fe.count_words(filename)
+    # numbers = [2, 3, 5, 7, 11, 13]
+    # filename = 'text_files/numbers.json'
+    # fe.json_dump(numbers, filename)
+
+    # filename = 'text_files/numbers.json'
+    # data = fe.json_load(filename)
+    # print(data)
+
+    filename = 'text_files/username.json'
+    fe.greet_user(filename)
 
 
 # Press the green button in the gutter to run the script.
