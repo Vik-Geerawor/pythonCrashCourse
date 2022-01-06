@@ -27,6 +27,7 @@ def build_person(first_name, last_name, age=''):
 
     return person
 
+
 def greetings():
     while True:
         print("\nPlease tell me your name. Enter exit to quit")
@@ -41,8 +42,59 @@ def greetings():
         print("\nHello, " + formatted_name + "!")
 
 
+## greet_users
 def greet_users(names):
     """Print a simple greeting to each user in the list."""
     for name in names:
         msg = "Hello, " + name.title() + "!"
         print(msg)
+
+
+def print_models(unprinted_designs, completed_models):
+    """"Print each design and then move it to completed_models"""
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+
+        # Simulate printing
+        print("Printing model: " + current_design)
+        completed_models.append(current_design)
+
+def show_completed_models(completed_models):
+    """Show all printed models"""
+    print("\nThe following models have been printed")
+    for completed_model in completed_models:
+        print(completed_model)
+
+
+def print_models(unprinted_designs, completed_models):
+    """"Print each design and then move it to completed_models"""
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+
+        # Simulate printing
+        print("Printing model: " + current_design)
+        completed_models.append(current_design)
+
+
+def show_completed_models(completed_models):
+    """Show all printed models"""
+    print("\nThe following models have been printed")
+    for completed_model in completed_models:
+        print(completed_model)
+
+
+def make_pizza(size, *toppings):
+    """Summarise the pizza to be made"""
+    print("\nMaking a " + str(size) + "-inch pizza with the following toppings:")
+    for topping in toppings:
+        print("- " + topping)
+
+
+def build_profile(first, last, **user_info):
+    """Dictionary of User Info"""
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
